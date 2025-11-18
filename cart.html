@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="cart-page for our products">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bced115041.js" crossorigin="anonymous"></script>
+    <title>Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="page-wrapper">
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="images/RainyDays_Logo.png" alt="company-logo">
+            </div>
+            <ul>
+                <li> <a href="index.html"> Home</a></li>
+                <li><a href= "product.html"> Products</a></li>
+                <li><a href="about-us.html"> About us</a></li>
+            </ul>
+            <div class="header-icons">
+                <button class="header-icon-button" aria-label="wish-icon"><i class="fa-regular fa-heart"></i></button>
+                <button class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </nav>
+    </header>
+<main>
+    <div class="shipping-discount">
+        <p>Free shipping on orders over 100$</p>
+    </div>
+    <section class="cart-section">
+        <h2>Shopping Cart</h2>
+        <table class="container-cart">
+            <thead> 
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tr class="product-oncart">
+                <td>
+                    <div class="cart-info">
+                        <img src="images/RainyDays_Jacket2.jpg" alt="Shield-Jacket">
+                    
+                        <div class="small-text">
+                            <p>Men´s Rain Shield Jacket</p>
+                            <small>Price: $99,99</small> <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1" min="1"> </td>
+                <td class="price">$99,99</td>
+            </tr>
+            <tr class="product-oncart">
+                <td>
+                    <div class="cart-info">
+                        <img src="images/RainyDays_Jacket6.jpg" alt="Explorer-Jacket">
+                    
+                        <div class="small-text">
+                            <p>Men´s Anorak Explorer Jacket</p>
+                            <small>Price: $149,99</small> <br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1" min="1"> </td>
+                <td class="price">$149,99</td>
+            </tr>
+        </table>
+        <h2 class="second-h1">Order Summary</h2>
+        <div class="summary">
+            <table>
+                <tr>
+                    <td>Total</td>
+                    <td class="price">$249,98</td>
+                </tr>
+                <tr>
+                    <td>Shipping Cost</td>
+                    <td class="price">$15,00</td>
+                </tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td class="price">$264,98</td>
+                </tr>
+            </table>
+            <div class="checkout-button">
+                <a href="confirmation.html" class="cta-button">Checkout</a>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer>
+        <div>
+            2025 Rainydays &copy;
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

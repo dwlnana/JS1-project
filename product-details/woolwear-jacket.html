@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="product details for our jacket">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bced115041.js" crossorigin="anonymous"></script>
+    <title>Woolwear-Jacket</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="../images/RainyDays_Logo.png" alt="companylogo">
+            </div>
+            <ul>
+                <li> <a href="../index.html"> Home</a></li>
+                <li><a href= "../product.html" class="active"> Products</a></li>
+                <li><a href="../about-us.html"> About us</a></li>
+            </ul>
+            <div class="header-icons">
+                <button class="header-icon-button" aria-label="wish-icon"><i class="fa-regular fa-heart"></i></button>
+                <button class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="product">
+            <div class="product-image">
+                <img src="../images/RainyDays_Jacket7.jpg" alt="Woolwear-Jacket">
+            </div>
+            <div class="product-info">
+                <h3>Alpine Woolwear</h3>
+                <p>A waterproof jacket designed to keep you dry in wet weather</p>
+                <p class="price">$89,99</p>
+            </div>
+            <div class="form-row">
+                <label for="color">Color</label>
+                <select name="color" id="color">
+                    <option value="black">Black</option>
+                    <option value="gray">Gray</option>
+                    <option value="navy blue">Navy Blue</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for= "size">Size</label>
+                <select name="size" id="size">
+                    <option value="xs">XS</option>
+                    <option value="s">S</option>
+                    <option value="m">M</option>
+                    <option value="l">L</option>
+                    <option value="xl">XL</option>
+                </select>
+            </div> 
+            <div class="action-button" >
+                <button class="cta-small cta-button add-to-cart" data-product-id="woolwear-jacket" data-price="89.99">Add To Cart</button>
+                <button aria-label="add to wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>        
+        </section>
+    </main>
+    <footer>
+        <div>
+            2025 Rainydays &copy;
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+
+</body>
+</html>
