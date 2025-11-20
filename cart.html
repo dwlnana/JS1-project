@@ -24,14 +24,16 @@
             <div class="header-icons">
                 <button class="header-icon-button" aria-label="wish-icon"><i class="fa-regular fa-heart"></i></button>
                 <button class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <a href="cart.html" class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-cart-shopping"></i></button>
+                <button class="header-icon-button cart-button" aria-label="wish-icon" onclick="window.location.href='cart.html'"><i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
             </div>
         </nav>
     </header>
 <main>
-    <div class="shipping-discount">
+    <!-- <div class="shipping-discount">
         <p>Free shipping on orders over 100$</p>
-    </div>
+    </div> -->
     <section class="cart-section">
         <h2>Shopping Cart</h2>
         <table class="container-cart">

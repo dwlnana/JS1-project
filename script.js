@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
             localStorage.setItem("cart", JSON.stringify(existingCart)); //saving to storage as a string. 
 
-            window.location.href = "../cart.html"; // this will take us to cart.html page 
+            updateCartCount(); 
+
+            //window.location.href = "../cart.html"; // this will take us to cart.html page (I dont to  anymore)
         });
 
     }
@@ -84,10 +86,22 @@ document.addEventListener("DOMContentLoaded", ()=>{
             cart.splice(index,1); 
 
             localStorage.setItem("cart", JSON.stringify(cart)); //save to localstorage 
+
+            updateCartCount() //this  updates the number 
+            window.location.reload(); //this reloads the page so we also see total update 
         })
        })
 
     }
 
+    function updateCartCount (){
+        const cart = JSON.parse(localStorage.getItem("cart"))|| []; 
+        const cartCount = document.getElementById("cart-count");
+
+        if (cartCount){
+            cartCount.textContent = cart.length; 
+        }
+    }
+    updateCartCount(); 
 });
 
