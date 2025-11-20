@@ -24,7 +24,7 @@
             <div class="header-icons">
                 <button class="header-icon-button" aria-label="wish-icon"><i class="fa-regular fa-heart"></i></button>
                 <button class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
-                <button class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-cart-shopping"></i></button>
+                <a href="cart.html" class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </nav>
     </header>
@@ -40,53 +40,28 @@
                     <th>Item</th>
                     <th>Quantity</th>
                     <th>Price</th>
+                    <th>Remove</th>
                 </tr>
             </thead>
-            <tr class="product-oncart">
-                <td>
-                    <div class="cart-info">
-                        <img src="images/RainyDays_Jacket2.jpg" alt="Shield-Jacket">
-                    
-                        <div class="small-text">
-                            <p>Men´s Rain Shield Jacket</p>
-                            <small>Price: $99,99</small> <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1" min="1"> </td>
-                <td class="price">$99,99</td>
-            </tr>
-            <tr class="product-oncart">
-                <td>
-                    <div class="cart-info">
-                        <img src="images/RainyDays_Jacket6.jpg" alt="Explorer-Jacket">
-                    
-                        <div class="small-text">
-                            <p>Men´s Anorak Explorer Jacket</p>
-                            <small>Price: $149,99</small> <br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1" min="1"> </td>
-                <td class="price">$149,99</td>
-            </tr>
+            <tbody id="cart-items">
+                <!--js will insert <tr> rows here-->
+            </tbody>
         </table>
+        <p id="cart-empty" style="display: none;">Your cart is Empty.</p>
         <h2 class="second-h1">Order Summary</h2>
         <div class="summary">
             <table>
                 <tr>
                     <td>Total</td>
-                    <td class="price">$249,98</td>
+                    <td class="price" id="cart-total">$0.00</td>
                 </tr>
                 <tr>
                     <td>Shipping Cost</td>
-                    <td class="price">$15,00</td>
+                    <td class="price">$15.00</td>
                 </tr>
                 <tr>
                     <td>Subtotal</td>
-                    <td class="price">$264,98</td>
+                    <td class="price">$0.00</td>
                 </tr>
             </table>
             <div class="checkout-button">
@@ -97,7 +72,7 @@
 </main>
     <footer>
         <div>
-            2025 Rainydays &copy;
+            2025 Rainy ays&copy;
         </div>
     </footer>
     <script src="script.js"></script>
