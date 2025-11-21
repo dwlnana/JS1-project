@@ -103,5 +103,83 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
     }
     updateCartCount(); 
+
+    async function loadProducts() {
+        const container = document.getElementById("products-container"); 
+        if(!container) return; 
+
+        try{
+            const response = await fetch("https://v2.api.noroff.dev/rainy-days");
+            const data = await response.json();
+            const products = data.data; 
+
+            container.innerHTML = ""; 
+
+            products.forEach(product =>{
+                const card = document.createElement("div"); 
+                card.classList.add("product-card")
+
+                card.innerHTML = `
+                    
+                    <a href= "product-details/product-details.html?id=${product.id}">
+                        <img src="${product.image.url}" alt= "${product.image.alt}"></img>
+                        <h3>${product.title}</h3>
+                        <p>$${product.discountedPrice ?? product.price}</p>
+                    </a>
+                `;
+
+                container.appendChild(card); 
+            });
+        }catch (error){
+            console.error("Error loading products:", error); 
+            container.innerHTML = "<p>Failed to load products.</p>"
+        };
+        
+    }
+
+    loadProducts(); 
+
+async function loadSingleProduct() {
+    const titleElement = document.getElementById("product-title"); 
+    
+    if(!titleElement) return; 
+
+    const params = new URLSearchParams(window.location.search); 
+    const productId = params.get("id"); 
+
+    if (!productId){
+        titleElement.textContent = "product not found"; 
+        return;
+    }
+
+    try{ //fetch the product from the api 
+        const response = await fetch ("https://v2.api.noroff.dev/rainy-days/" + productId);
+
+        const data = await response.json(); 
+        const product = data.data; 
+
+        document.getElementById("product-image").src= product.image.url; 
+        document.getElementById("product-image").alt = product.image.alt; 
+        document.getElementById("product-title").textContent = product.title; 
+        document.getElementById("product-description").textContent = product.description;
+        document.getElementById("product-price").textContent = "$" + (product.discountedPrice ?? product.price); 
+
+        const addToCartBtn = document.querySelector(".add-to-cart"); 
+        if(addToCartBtn){
+            addToCartBtn.dataset.productId = product.id; 
+            addToCartBtn.dataset.price = product.discountedPrice ?? product.price;
+        }
+
+
+    }catch(error){
+        console.error("error loading product", error); 
+        titleElement.textContent = "Failed to load product."; 
+    }
+
+}
+
+loadSingleProduct(); 
+
 });
+
 

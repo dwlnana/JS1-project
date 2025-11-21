@@ -1,3 +1,20 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+
 h1, 
 body, 
 p{
@@ -6,7 +23,7 @@ p{
 
 footer{
     padding: 15px 0;
-}
+} 
 
 header{
     background-color:#113340;
@@ -407,6 +424,18 @@ td{
     position: relative;
 }
 
+#products-container{
+    max-width: 1000px;
+    margin: 40px auto 60px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+
+
+
 /*Confirmation*/
 
 .fa-regular.fa-thumbs-up{
@@ -424,14 +453,21 @@ td{
   letter-spacing: 0.3rem;
 }
 
-main{
+.confirmation-page main{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-@media (max-width: 768px){
+.page-content{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+
+
+/*@media (max-width: 768px){
     body{
         font-size: 16px;
         padding: 10px;

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product-details</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+             <img src="../images/RainyDays_Logo.png" alt="companylogo">
+            </div>
+            <ul>
+                <li> <a href="../index.html"> Home</a></li>
+                <li><a href= "../product.html" class="active"> Products</a></li>
+                <li><a href="../about-us.html"> About us</a></li>
+            </ul>
+            <div class="header-icons">
+                <button class="header-icon-button" aria-label="wish-icon"><i class="fa-regular fa-heart"></i></button>
+                <button class="header-icon-button" aria-label="wish-icon"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="header-icon-button cart-button" aria-label="wish-icon" onclick="window.location.href='../cart.html'"><i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
+            </div>
+        </nav> 
+    </header>
+    <main>
+        <img id="product-image" src="" alt="">
+        <h3 id="product-title"></h3>
+        <p id="product-description"></p>
+        <p id="product-price"></p>
+
+        <button class="add-to-cart">Add To Cart</button>
+    </main>
+    <script src="../script.js"></script>
+</body>
+</html>
