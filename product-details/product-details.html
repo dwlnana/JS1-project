@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bced115041.js" crossorigin="anonymous"></script>
     <title>product-details</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -31,8 +33,26 @@
         <h3 id="product-title"></h3>
         <p id="product-description"></p>
         <p id="product-price"></p>
+        <div class="form-row">
+            <label for="color">Color</label>
+            <select name="color" id="color">
+                <option value="black">Black</option>
+                <option value="gray">Gray</option>
+                <option value="navy blue">Navy Blue</option>
+            </select>
 
-        <button class="add-to-cart">Add To Cart</button>
+            <label for= "size">Size</label>
+            <select name="size" id="size">
+                <option value="xs">XS</option>
+                <option value="s">S</option>
+                <option value="m">M</option>
+                <option value="l">L</option>
+                <option value="xl">XL</option>
+            </select>
+        </div>
+
+
+        <button class="cta-small cta-button add-to-cart">Add To Cart</button>
     </main>
     <script src="../script.js"></script>
 </body>

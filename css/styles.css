@@ -90,10 +90,10 @@ nav li{
 
 .cta-small {
     padding: 5px 16px;
-    grid-column:2;
-    grid-row: 3/5;
+    display: flex;
     align-self: center;
-    margin-top: 25px;
+    margin: 15px 0;
+    justify-content: center;
 }
 
 img{
@@ -303,10 +303,22 @@ a{
 }
 
 .form-row{
-    grid-column: 1/-1;
-    padding: 10px;
-    margin-left: 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+
+
+.select{
+    padding: 5px;
+    font-size: 1rem;
+}
+
+
+
+
 .product-info{
     grid-column: 1 / -1;
     padding: 10px;
@@ -433,6 +445,13 @@ td{
     align-items: center;
 }
 
+#product-image , .add-to-cart, #product-description, #product-title, #product-price{
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    object-fit: contain;
+}
 
 
 

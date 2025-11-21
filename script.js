@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     size: ${item.size}
                 </td>
                 <td>${item.quantity}</td>
-                <td>$${item.price.toFixed(2)}</td>
+                <td>$${(item.price ? item.price.toFixed(2): "0.00")}</td>
                 <td>
                     <button class = "remove-item" data-index = "${index}"> Remove </button> </td>
             </tr>
@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     }
 
     loadProducts(); 
+    updateCartCount();
 
 async function loadSingleProduct() {
     const titleElement = document.getElementById("product-title"); 
@@ -178,7 +179,8 @@ async function loadSingleProduct() {
 
 }
 
-loadSingleProduct(); 
+    loadSingleProduct(); 
+    updateCartCount()
 
 });
 
