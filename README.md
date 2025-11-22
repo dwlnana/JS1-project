@@ -15,6 +15,7 @@ User Stories
 - As a user, I want to remove a product from my basket.
 - As a user, I want to view a summary of my cart on the checkout page.
 - As a user, I want to view an order-confirmation screen after checking out.
+
 Required Pages
 The following pages are required to complete this assignment.
 - Home Page containing product list `/index.html`
@@ -22,6 +23,7 @@ The following pages are required to complete this assignment.
 - Checkout Page showing all items in the basket `/checkout/index.html`
 - Confirmation Page showing a thank you message
 `/checkout/confirmation/index.html`
+
 Optional Pages
 The following pages are not required to complete this assignment but help to
 improve the realism for those with extra time.
@@ -29,12 +31,13 @@ improve the realism for those with extra time.
 - Terms and Conditions page (this may be AI generated)
 - Privacy Policy (this may be AI generated)
 - My Profile
+
 Process
-1. 2. 3. 4. 5. 6. 7. 8. Decide if you will use your existing project, or a fresh project.
-Open your project in GitHub Desktop and VS Code.
-Select one of the three provided endpoints from the list below.
-Checkout the API documentation for your chosen endpoint.
-Work through the requirements in JavaScript one by one.
-Test your work thoroughly and ask for peer review.
-Offer to review two other student's work.
-Make any final changes and submit for delivery.
+1. Decide if you will use your existing project, or a fresh project.
+2. Open your project in GitHub Desktop and VS Code.
+3. Select one of the three provided endpoints from the list below.
+4. Checkout the API documentation for your chosen endpoint.
+5. Work through the requirements in JavaScript one by one.
+6. Test your work thoroughly and ask for peer review.
+7. Offer to review two other student's work.
+8. Make any final changes and submit for delivery.
